@@ -9,18 +9,20 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@apollo/client": "3.13.6",
+    "graphql": "16.10.0",
     "next": "15.5.4",
     "react": "19.1.0",
-    "react-admin": "^5.11.4",
+    "react-admin": "5.11.4",
     "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@eslint/eslintrc": "3",
+    "@types/node": "20",
+    "@types/react": "19",
+    "@types/react-dom": "19",
+    "eslint": "9",
     "eslint-config-next": "15.5.4",
-    "typescript": "^5"
+    "typescript": "5"
   }
 }
