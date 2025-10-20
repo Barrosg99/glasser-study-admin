@@ -48,13 +48,12 @@ const ReportRedirectField = () => {
   if (!record) return null;
 
   if (record.entity === "POST") {
+    const link = `/posts/${record.entityId}`;
+
     return (
-      <RedirectField
-        source="post"
-        resource="posts"
-        name="Post"
-        id={record.entityId}
-      />
+      <Link to={link} target="_blank">
+        POST
+      </Link>
     );
   }
 
