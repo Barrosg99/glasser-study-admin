@@ -57,6 +57,7 @@ const ReportRedirectField = () => {
       />
     );
   }
+
   if (record.entity === "MESSAGE") {
     if (loading) return <div>Loading...</div>;
     if (!chat) return null;

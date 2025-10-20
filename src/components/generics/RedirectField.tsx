@@ -12,7 +12,7 @@ const RedirectField = ({
   resource: string;
 }) => {
   const record = useRecordContext();
-  if (!record) return null;
+  if (!record || !record[source]) return null;
 
   const link = id ? `/${resource}/${id}` : `/${resource}/${record[source].id}`;
 
