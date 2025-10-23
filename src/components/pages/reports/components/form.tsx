@@ -98,7 +98,7 @@ const ReportToolbar = () => {
 
   return (
     <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-      {record?.status === "pending" && (
+      {record?.status === "PENDING" && (
         <Button
           sx={{
             color: "white",
