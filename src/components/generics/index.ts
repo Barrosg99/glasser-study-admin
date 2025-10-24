@@ -1,3 +1,4 @@
 import RedirectField from "./RedirectField";
+import CardWithIcon from "./CardWithIcon";
 
-export { RedirectField };
+export { RedirectField, CardWithIcon };

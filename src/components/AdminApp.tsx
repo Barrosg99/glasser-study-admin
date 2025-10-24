@@ -1,16 +1,15 @@
 "use client";
-import { Admin, EditGuesser, ListGuesser, Resource } from "react-admin";
+import { Admin, Resource } from "react-admin";
 import { Route } from "react-router-dom";
 
-import Dashboard from "./pages/dashboard";
 import authProvider from "@/providers/Auth";
 import dataProvider from "@/providers/Data";
 
-import { Users, Posts, Chats, Reports } from "./pages";
+import { Users, Posts, Chats, Reports, Dashboard } from "./pages";
 
 const AdminApp = () => (
   <Admin
-    dashboard={Dashboard}
+    dashboard={Dashboard.default}
     authProvider={authProvider}
     dataProvider={dataProvider}
   >

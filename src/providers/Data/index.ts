@@ -22,7 +22,14 @@ import {
 
 import resources from "./resources";
 
-const dataProvider: DataProvider = {
+export interface DataProviderWithCustomMethods extends DataProvider {
+  getSummary: (
+    resource: string,
+    period: string
+  ) => Promise<{ data: number[]; labels: string[] }>;
+}
+
+const dataProvider: DataProviderWithCustomMethods  = {
   getList: async (
     resource: string,
     params: GetListParams
@@ -131,6 +138,22 @@ const dataProvider: DataProvider = {
     return {
       data: [],
     };
+  },
+  getSummary: async (
+    resource: string,
+    period: string
+  ): Promise<{ data: number[]; labels: string[] }> => {
+    if (resource === "users") {
+      return resources.dashboard.getUserSummary(period);
+    }
+    if (resource === "posts") {
+      return resources.dashboard.getPostSummary(period);
+    }
+    if (resource === "goals") {
+      return resources.dashboard.getGoalSummary(period);
+    }
+
+    return Promise.reject(`Resource ${resource} not found`);
   },
 };
 

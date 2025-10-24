@@ -1,13 +1,15 @@
 import React from "react";
-import { Card, CardHeader, CardContent } from "@mui/material";
+import { Card } from "@mui/material";
+import Chart from "./Chart";
+import Header from "./Header";
 
 const Dashboard = () => (
-  <Card>
-    <CardHeader title="Dashboard" />
-    <CardContent>
-      <p>Bem-vindo ao Admin do Glasser Study!</p>
-    </CardContent>
-  </Card>
+  <>
+    <Card>
+      <Header />
+      <Chart />
+    </Card>
+  </>
 );
 
 export default Dashboard;
