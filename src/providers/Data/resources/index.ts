@@ -3,7 +3,8 @@ import * as users from "./users";
 import * as chats from "./chats";
 import * as messages from "./messages";
 import * as reports from "./reports";
+import * as dashboard from "./dashboard";
 
-const resources = { posts, users, chats, reports, messages };
+const resources = { posts, users, chats, reports, messages, dashboard };
 
 export default resources;

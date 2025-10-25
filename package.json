@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@apollo/client": "3.13.6",
+    "echarts": "6.0.0",
     "graphql": "16.10.0",
     "next": "15.5.4",
     "react": "19.1.0",
