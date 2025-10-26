@@ -5,7 +5,7 @@ export const GET_USER_SUMMARY = gql`
     adminGetUserSummary(userSummaryInput: $userSummaryInput) {
       labels
       data
-    }   
+    }
   }
 `;
 
@@ -14,7 +14,7 @@ export const GET_POST_SUMMARY = gql`
     adminGetPostSummary(postSummaryInput: $postSummaryInput) {
       labels
       data
-    }   
+    }
   }
 `;
 
@@ -23,6 +23,15 @@ export const GET_GOAL_SUMMARY = gql`
     adminGetGoalSummary(goalSummaryInput: $goalSummaryInput) {
       labels
       data
-    }   
+    }
+  }
+`;
+
+export const GET_APPLICATION_SUMMARY = gql`
+  query adminGetApplicationSummary {
+    adminCountUsers
+    adminCountPosts
+    adminCountGoals
+    adminGetPercentageOfCompletedGoals
   }
 `;

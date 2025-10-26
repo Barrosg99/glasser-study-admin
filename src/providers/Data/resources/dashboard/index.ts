@@ -3,6 +3,7 @@ import {
   GET_POST_SUMMARY,
   GET_GOAL_SUMMARY,
   GET_USER_SUMMARY,
+  GET_APPLICATION_SUMMARY,
 } from "./graphql/queries";
 
 export const getUserSummary = async (period: string) => {
@@ -30,4 +31,12 @@ export const getGoalSummary = async (period: string) => {
   });
 
   return data.adminGetGoalSummary;
+};
+
+export const getApplicationSummary = async () => {
+  const { data } = await client.query({
+    query: GET_APPLICATION_SUMMARY,
+  });
+
+  return data;
 };

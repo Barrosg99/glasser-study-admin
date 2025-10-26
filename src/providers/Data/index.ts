@@ -29,7 +29,7 @@ export interface DataProviderWithCustomMethods extends DataProvider {
   ) => Promise<{ data: number[]; labels: string[] }>;
 }
 
-const dataProvider: DataProviderWithCustomMethods  = {
+const dataProvider: DataProviderWithCustomMethods = {
   getList: async (
     resource: string,
     params: GetListParams
@@ -151,6 +151,9 @@ const dataProvider: DataProviderWithCustomMethods  = {
     }
     if (resource === "goals") {
       return resources.dashboard.getGoalSummary(period);
+    }
+    if (resource === "application") {
+      return resources.dashboard.getApplicationSummary();
     }
 
     return Promise.reject(`Resource ${resource} not found`);

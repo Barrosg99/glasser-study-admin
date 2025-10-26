@@ -150,7 +150,7 @@ const Chart = () => {
             >
               <MenuItem value={"users"}>Usuarios Criados</MenuItem>
               <MenuItem value={"posts"}>Posts Criados</MenuItem>
-              <MenuItem value={"goals"}>Metricas Criadas</MenuItem>
+              <MenuItem value={"goals"}>Metas Criadas</MenuItem>
             </Select>
           </FormControl>
           <FormControl fullWidth>
