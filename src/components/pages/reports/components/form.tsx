@@ -26,8 +26,7 @@ const fetchChat = async (id: string) => {
   try {
     const { chat } = await getMessageChat(id);
     return chat;
-  } catch (error) {
-    console.error("Error fetching chat:", error);
+  } catch {
     return null;
   }
 };
